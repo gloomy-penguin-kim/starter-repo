@@ -340,7 +340,7 @@
                   "severity": "TBD",
                   "type": "Spoofing",
                   "description": "Pretending to be someone/something else",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Strong Authentication, Email Protections, Network Security, Cryptographic Certificates, Code Signing and Content Signing ",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 1,
@@ -348,7 +348,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "repudiation": 0
               }
             }
@@ -484,7 +484,7 @@
                   "severity": "TBD",
                   "type": "Information disclosure",
                   "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Least Privilege, Regular Patching, Credential Guarding, Access Control, Input Validation, Secure Boot",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 6,
@@ -494,7 +494,7 @@
               "threatFrequency": {
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 2,
                 "denialOfService": 0
               }
             }
@@ -584,7 +584,7 @@
                   "severity": "TBD",
                   "type": "Tampering",
                   "description": "Modifying data or code without authorization",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Access Control, Input Validation, File Integrity Monitoring, Anti-Tampering Protection",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 2,
@@ -593,7 +593,7 @@
               ],
               "trustBoundaryIds": [],
               "threatFrequency": {
-                "tampering": 1,
+                "tampering": 2,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
@@ -613,91 +613,6 @@
             "vertices": [
               {
                 "x": 450,
-                "y": 255
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "sql query",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "0629782e-04ab-4a19-b3c1-15a28e7ab5ae",
-                  "title": "Denial of Service",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Denial of service",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 9,
-                  "score": ""
-                },
-                {
-                  "id": "15076226-6e7b-4ea8-b5bc-cbb30b76cbf7",
-                  "title": "New STRIDE threat",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Information disclosure",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 10,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 1,
-                "denialOfService": 1
-              }
-            },
-            "labels": [
-              "sql query"
-            ],
-            "id": "5225dfa9-1eb0-4bf1-a702-d73edcfbcc1f",
-            "source": {
-              "x": 692,
-              "y": 255
-            },
-            "target": {
-              "cell": "eb427637-2d05-4fa8-a4f8-012f88824867",
-              "port": "f46cfe71-8233-47f3-a857-0442845c9ce6"
-            },
-            "vertices": [
-              {
-                "x": 940,
                 "y": 255
               }
             ]
@@ -815,6 +730,91 @@
               "port": "80d1757a-4d3c-43d3-b655-4275bd9f1b83"
             },
             "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "sql query",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "0629782e-04ab-4a19-b3c1-15a28e7ab5ae",
+                  "title": "Denial of Service",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Denial of service",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                },
+                {
+                  "id": "15076226-6e7b-4ea8-b5bc-cbb30b76cbf7",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 1
+              }
+            },
+            "labels": [
+              "sql query"
+            ],
+            "id": "5225dfa9-1eb0-4bf1-a702-d73edcfbcc1f",
+            "source": {
+              "x": 710,
+              "y": 230
+            },
+            "target": {
+              "cell": "eb427637-2d05-4fa8-a4f8-012f88824867",
+              "port": "f46cfe71-8233-47f3-a857-0442845c9ce6"
+            },
+            "vertices": [
+              {
+                "x": 940,
+                "y": 255
+              }
+            ]
           }
         ],
         "description": "STRID Diagram"
