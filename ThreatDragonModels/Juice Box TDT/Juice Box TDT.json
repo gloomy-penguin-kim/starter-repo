@@ -192,7 +192,15 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -474,58 +482,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "sql query",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "sql query"
-            ],
-            "id": "5225dfa9-1eb0-4bf1-a702-d73edcfbcc1f",
-            "source": {
-              "x": 692,
-              "y": 255
-            },
-            "target": {
-              "cell": "eb427637-2d05-4fa8-a4f8-012f88824867",
-              "port": "f46cfe71-8233-47f3-a857-0442845c9ce6"
-            },
-            "vertices": [
-              {
-                "x": 960,
-                "y": 255
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "http response",
               "description": "",
               "outOfScope": false,
@@ -670,6 +626,58 @@
               "port": "5b828344-6d51-425b-921e-d56f788c86a4"
             },
             "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "sql query",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "sql query"
+            ],
+            "id": "5225dfa9-1eb0-4bf1-a702-d73edcfbcc1f",
+            "source": {
+              "x": 692,
+              "y": 255
+            },
+            "target": {
+              "cell": "eb427637-2d05-4fa8-a4f8-012f88824867",
+              "port": "f46cfe71-8233-47f3-a857-0442845c9ce6"
+            },
+            "vertices": [
+              {
+                "x": 990,
+                "y": 255
+              }
+            ]
           }
         ],
         "description": "STRID Diagram"
@@ -677,6 +685,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 2
+    "threatTop": 3
   }
 }
