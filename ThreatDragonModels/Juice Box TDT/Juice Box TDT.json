@@ -45,7 +45,8 @@
             "target": {
               "x": 390,
               "y": 510
-            }
+            },
+            "vertices": []
           },
           {
             "shape": "trust-boundary-curve",
@@ -195,10 +196,10 @@
               "threats": [
                 {
                   "id": "dd5825a6-2b19-46d0-bdfa-d0b9ba454f0e",
-                  "title": "Denial of Service",
+                  "title": "Repudiation",
                   "status": "Open",
-                  "severity": "TBD",
-                  "type": "Denial of service",
+                  "severity": "Medium",
+                  "type": "Repudiation",
                   "description": "Degrading of denying legitimate access",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
@@ -210,7 +211,7 @@
               "threatFrequency": {
                 "spoofing": 0,
                 "tampering": 0,
-                "repudiation": 0,
+                "repudiation": 1,
                 "informationDisclosure": 0,
                 "denialOfService": 1,
                 "elevationOfPrivilege": 0
@@ -540,8 +541,8 @@
               "port": "80d1757a-4d3c-43d3-b655-4275bd9f1b83"
             },
             "target": {
-              "cell": "5509f599-4302-46b4-ad21-1a780fbe9998",
-              "port": "71d4e4e3-ca20-4fb8-b0df-395455d0f10a"
+              "x": 440,
+              "y": 370
             }
           },
           {
@@ -620,7 +621,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -641,13 +643,45 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "0629782e-04ab-4a19-b3c1-15a28e7ab5ae",
+                  "title": "Denial of Service",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Denial of service",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                },
+                {
+                  "id": "15076226-6e7b-4ea8-b5bc-cbb30b76cbf7",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 1
+              }
             },
             "labels": [
               "sql query"
@@ -734,6 +768,53 @@
               "port": "5b828344-6d51-425b-921e-d56f788c86a4"
             },
             "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "http response",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "http response"
+            ],
+            "id": "57fbc5b8-01e6-43d0-8852-3150c7b0f9e2",
+            "source": {
+              "x": 230,
+              "y": 285
+            },
+            "target": {
+              "cell": "9eebe302-f32a-443e-b3cd-137570b6c1ea",
+              "port": "80d1757a-4d3c-43d3-b655-4275bd9f1b83"
+            },
+            "vertices": []
           }
         ],
         "description": "STRID Diagram"
@@ -741,6 +822,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 8
+    "threatTop": 10
   }
 }
