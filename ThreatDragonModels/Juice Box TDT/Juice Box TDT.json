@@ -97,6 +97,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -180,7 +181,6 @@
               ]
             },
             "id": "9eebe302-f32a-443e-b3cd-137570b6c1ea",
-            "zIndex": 1,
             "data": {
               "type": "tm.Process",
               "name": "Juice Shop \nWeb App",
@@ -239,6 +239,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -322,7 +323,6 @@
               ]
             },
             "id": "5509f599-4302-46b4-ad21-1a780fbe9998",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "User / Browser",
@@ -379,6 +379,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -462,7 +463,6 @@
               ]
             },
             "id": "eb427637-2d05-4fa8-a4f8-012f88824867",
-            "zIndex": 3,
             "data": {
               "type": "tm.Store",
               "name": "Juice Shop \nDatabase",
