@@ -88,7 +88,7 @@
           {
             "position": {
               "x": 170,
-              "y": -440
+              "y": -390
             },
             "size": {
               "width": 112.5,
@@ -106,6 +106,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -189,7 +190,6 @@
               ]
             },
             "id": "53b930d6-451c-4be4-a95c-d25191a8db19",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Browser User",
@@ -226,6 +226,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -309,7 +310,6 @@
               ]
             },
             "id": "f5bae5ea-b1e2-44d4-8aea-1da3b6ecbcc6",
-            "zIndex": 3,
             "data": {
               "type": "tm.Store",
               "name": "App Database",
@@ -373,15 +373,64 @@
             }
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "f0c03231-651b-475f-ad01-7dd70db6c046",
+            "source": {
+              "x": 210,
+              "y": -590
+            },
+            "target": {
+              "x": 310,
+              "y": -490
+            }
+          },
+          {
             "position": {
-              "x": 520,
-              "y": -420
+              "x": 480,
+              "y": -435
             },
             "size": {
-              "width": 60,
-              "height": 60
+              "width": 170,
+              "height": 150
             },
             "attrs": {
+              "text": {
+                "text": "Juice Shop Application"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -390,6 +439,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -473,10 +523,9 @@
               ]
             },
             "id": "0d861146-01d1-4a9f-8a13-cf7941a13b2b",
-            "zIndex": 11,
             "data": {
               "type": "tm.Process",
-              "name": "Process",
+              "name": "Juice Shop Application",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
