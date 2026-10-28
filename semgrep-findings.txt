@@ -1,0 +1,4 @@
+| Finding | File:Line | Verdict | Action Taken |b
+| eval() use | utils.js:42 | True Positive | Replaced with JSON.parse |
+| Hardcoded secret pattern | config.js:8 | False Positive | Already an env var
+reference, not a literal |
