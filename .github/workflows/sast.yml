@@ -1,4 +1,4 @@
-name: SAST
+name: SAST Scan 
 
 on: [push, pull_request]
 
