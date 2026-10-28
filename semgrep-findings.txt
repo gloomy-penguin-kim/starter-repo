@@ -1,4 +1,6 @@
-| Finding | File:Line | Verdict | Action Taken |b
-| eval() use | utils.js:42 | True Positive | Replaced with JSON.parse |
-| Hardcoded secret pattern | config.js:8 | False Positive | Already an env var
-reference, not a literal |
+# Lab 4: Semgrep Finding Triage Log
+
+| Finding | File:Line | Verdict | Action Taken |
+|---|---|---|---|
+| Mutable GitHub Action: `actions/checkout@v4` | `.github/workflows/ci.yml:23` | True Positive | Replaced the mutable version tag with a full 40-character commit SHA. |
+| Mutable GitHub Action: `aws-actions/configure-aws-credentials@v4` | `.github/workflows/ci.yml:26` | True Positive | Replaced the mutable version tag with a full 40-character commit SHA. |
