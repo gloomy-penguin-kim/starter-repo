@@ -25,4 +25,4 @@ jobs:
           path: sbom.json
 
       - name: Scan for critical vulnerabilities
-        run: trivy fs --severity CRITICAL --exit-code 1 .
+        run: trivy fs --severity CRITICAL --exit-code 1 .  
